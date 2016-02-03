@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="webstyle.css" >
+</head>
+<script type="text/javascript" src="scriptweb.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+<script>
+var myFirebaseRef = new Firebase("https://searsweb.firebaseio.com/");
+	    myFirebaseRef.child("case1").on("value", function(snapshot) {
+      document.getElementById("info1").innerHTML=(snapshot.val());  
+    });
+    
+</script>
+
+<body>
+<div class="header" style="text-align:center;">
+<h1>Sears Holdings</h1>
+<h1> India</h1>
+</div>
+	<div class="flex-body" style="text-align:justify;" >
+				<div id="info1">
+				
+				</div>
+			</div>
+
+
+
+
+<div id="footer" >
+		<div id="footerleft" >
+			<h4>Sears Holdings India</h4>
+			<p>7th Floor,Wing 2</p>
+			<p>Eon IT park Kharadi Pune-411014</p>
+			<p>Phone : +91-02 67308500</p>
+		</div>
+		<div id="footerright" >
+			<h4>Contact</h4>
+			<form  name ="User_Contact"  action="" method="post">
+			Enter Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="User_Name"><br><br>
+			Enter Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="User_Mail"><br><br>
+			Enter Message &nbsp;&nbsp;<input type="text" name="User_Message"><br><br>
+			<input type="button" value="Submit" onclick="validateForm();"/><br><br><br>
+			<input type="textarea" name="User_Response">
+			</form>
+			
+		</div>
+</div>
+</body>
+</html>

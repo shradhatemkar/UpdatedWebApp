@@ -1,0 +1,144 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="webstyle.css" >
+</head>
+<script type="text/javascript" src="scriptweb.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+<script>
+var myFirebaseRef = new Firebase("https://searsweb.firebaseio.com/");
+	    myFirebaseRef.child("case1").on("value", function(snapshot) {
+      document.getElementById("info").innerHTML=(snapshot.val());  
+    });
+    var myFirebaseRef1 = new Firebase("https://searsweb.firebaseio.com/");
+	    myFirebaseRef.child("case2").on("value", function(snapshot) {
+      document.getElementById("info1").innerHTML=(snapshot.val());  
+    });
+	var myFirebaseRef2 = new Firebase("https://searsweb.firebaseio.com/");
+	    myFirebaseRef.child("case3").on("value", function(snapshot) {
+      document.getElementById("info2").innerHTML=(snapshot.val());  
+    });
+	
+	var myFirebaseRef3 = new Firebase("https://searsweb.firebaseio.com/");
+	    myFirebaseRef.child("case4").on("value", function(snapshot) {
+      document.getElementById("info3").innerHTML=(snapshot.val()); 
+    });
+</script>
+
+<body>
+
+<div class="header" style="text-align:center;">
+<h1>Sears Holdings</h1>
+<h1> India</h1>
+</div>
+
+<div  class="flex-body">
+	<div class="flex-body_left">
+			<div>
+				<img src="searslogo.jpg" alt="HTML5 Icon" style="border:0;" class="image" align="middle">
+			</div>
+			<div style="float:left;text-align:justify;">
+				The number of lines in a paragraph depends on the size of the browser window. If you resize 
+				the browser window, the number of lines in this 
+				paragraph will change.This paragraph contains a lot of spacesin the source     code,   but the    browser 
+				ignores it.The number of lines in a paragraph depends on the size of the browser window. If you resize 
+				the browser window, the number of lines in this 
+			</div>
+			<div>
+				<img src="searslogo.jpg" alt="HTML5 Icon" style="border:0;" class="image" align="middle">
+			</div>
+			<div style="float:left;text-align:justify;">
+				The number of lines in a paragraph depends on the size of the browser window. If you resize 
+				the browser window, the number of lines in this 
+				paragraph will change.This paragraph contains a lot of spacesin the source     code,   but the    browser 
+				ignores it.The number of lines in a paragraph depends on the size of the browser window. If you resize 
+				the browser window, the number of lines in this 
+			</div>	    
+	</div>
+
+
+<div class="flex-body_right">
+		<div  style="text-align:center;">
+			<h2>News Updates </h2>
+		</div>
+		<hr>
+		<div>
+			<div style="text-align:justify;" class="right" >
+				<div  style="text-align:center;" id="header">
+					
+				</div>
+				<div id="info">
+				
+				</div>
+				<a href="Link1.html" >Read More</a>
+			</div>
+			
+		</div>
+		<hr>
+		<div>
+				<div style="text-align:justify;" class="right" >
+					<div  style="text-align:center;" id="header">
+						
+					</div>
+				<div id="info1">
+				
+				</div>
+				<a href="Link2.html" >Read More</a>
+			</div>
+			
+		</div>
+		<hr>
+		<div>
+				<div style="text-align:justify;" class="right" >
+					<div  style="text-align:center;" id="header">
+						
+					</div>
+				<div id="info2">
+				
+				</div>
+				<a href="Link3.html" >Read More</a>
+			</div>
+			
+		</div>
+		<hr>
+		<div>
+				<div style="text-align:justify;" class="right" >
+					<div  style="text-align:center;" id="header">
+						
+					</div>
+					<div id="info3">
+				
+				</div>
+				<a href="Link4.html" >Read More</a>
+			</div>
+			
+		</div>
+		<hr>
+
+</div>
+</div>
+
+
+
+<!--Footer-->
+<div id="footer" >
+		<div id="footerleft" >
+			<h4>Sears Holdings India</h4>
+			<p>7th Floor,Wing 2</p>
+			<p>Eon IT park Kharadi Pune-411014</p>
+			<p>Phone : +91-02 67308500</p>
+		</div>
+		<div id="footerright" >
+			<h4>Contact</h4>
+			<form  name ="User_Contact"  action="" method="post">
+			Enter Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="User_Name"><br><br>
+			Enter Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="User_Mail"><br><br>
+			Enter Message &nbsp;&nbsp;<input type="text" name="User_Message"><br><br>
+			<input type="button" value="Submit" onclick="validateForm();"/><br><br><br>
+			<input type="textarea" name="User_Response">
+			</form>
+			
+		</div>
+</div>
+</body>
+</html>
